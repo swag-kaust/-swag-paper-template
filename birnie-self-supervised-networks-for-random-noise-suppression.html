@@ -570,61 +570,79 @@
       i.e. data that has some degree of correlation along the time axis. This
       however requires a careful consideration of the algorithm's hyper-parameters and their meaning
       with respect to the seismic scenario.
-        <p>
-
-       <center>
-        <p>
-          <img src="assets/birnie-self-supervised-networks-for-random-noise-suppression/Theory.png" class="img-responsive">
-          <!-- <br /> <em>Fig. 1</em> Schematic illustration of the Noise2Void denoising procedure. -->
-        </p>        
-       </center>
-      <br>
-
-     <!-- ====================================================== -->
-     <!-- ================== Results =========================== -->
-     <!-- ====================================================== -->
-     <div class="row section">
-      <div class="section_title">Results</div>
-      
-      Under a White, Gaussian Noise scenario, the self-supervised procedure is shown to efficiently
-      suppress almost all noise with minimal signal leakage. For the scenario where the data is
-      contaminated by bandpassed noise, the majority of the noise can be suppressed however not
-      quite to the performance of the WGN case, given there now exists some spatial correlation in
-      the noise. Nevertheless, the product of an acoustic impedance inversion shows the substantial
-      gains available by the denoising procedure. Finally, the N2V workflow is applied to a field
-      dataset with its performance benchmarked against two common suppression procedures: FK deconvolution
-      and curvelets. The N2V procedure is shown to be that which suppresses the most noise with minimal
-      signal leakage and introduction of artefacts.
-        <p>
-
-       <center>
-        <p>
-          <img src="assets/birnie-self-supervised-networks-for-random-noise-suppression/Results.png" class="img-responsive">
-          <!-- <br /> <em>Fig. 1</em> Schematic illustration of the Noise2Void denoising procedure. -->
-        </p>        
-       </center>
-<hr>
-
-     <!-- ====================================================== -->
-     <!-- ================== References ======================== -->
-     <!-- ====================================================== -->
-     <div class="row section">
-      <div class="section_title">Citation</div>
       <p>
-        If you found the paper useful, please cite it via:<br />
-     </p>
-     <div class="highlight wb">
-      <pre class="chroma">
-          <code>
+
+          <center>
+              <p>
+                  <img src="assets/birnie-self-supervised-networks-for-random-noise-suppression/Theory.png" class="img-responsive">
+                  <!-- <br /> <em>Fig. 1</em> Schematic illustration of the Noise2Void denoising procedure. -->
+              </p>
+          </center>
+          <br>
+
+          <!-- ====================================================== -->
+          <!-- ================== Results =========================== -->
+          <!-- ====================================================== -->
+          <div class="row section">
+              <div class="section_title">Results</div>
+
+
+
+              Under a White, Gaussian Noise scenario, the self-supervised procedure is shown to efficiently
+              suppress almost all noise with minimal signal leakage. For the scenario where the data is
+              contaminated by bandpassed noise, the majority of the noise can be suppressed however not
+              quite to the performance of the WGN case, given there now exists some spatial correlation in
+              the noise. Nevertheless, the product of an acoustic impedance inversion shows the substantial
+              gains available by the denoising procedure. Finally, the N2V workflow is applied to a field
+              dataset with its performance benchmarked against two common suppression procedures: FK deconvolution
+              and curvelets. The N2V procedure is shown to be that which suppresses the most noise with minimal
+              signal leakage and introduction of artefacts.
+              <p>
+                  <!-- <center> -->
+                  <div class="row row-eq-height" style="margin-bottom: -10px">
+                      <div class="col-sm-12 col-sm-offset-0">
+                          <div class="col-sm-6" style="margin-bottom: 10px">
+
+                              <img src="assets/birnie-self-supervised-networks-for-random-noise-suppression/N2V_Bandpass.png" class="img-responsive">
+
+                          </div>
+                          <div class="col-sm-6" style="margin-bottom: 10px">
+
+                              <img src="assets/birnie-self-supervised-networks-for-random-noise-suppression/Results.png" class="img-responsive">
+
+                          </div>
+                      </div>
+
+                  </div>
+          </div>
+          <!--<center>
+              <p>
+                  <img src="assets/birnie-self-supervised-networks-for-random-noise-suppression/Results.png" class="img-responsive">-->
+                  <!-- <br /> <em>Fig. 1</em> Schematic illustration of the Noise2Void denoising procedure. -->
+              <!--</p>
+          </center>-->
+          <hr>
+
+          <!-- ====================================================== -->
+          <!-- ================== References ======================== -->
+          <!-- ====================================================== -->
+          <div class="row section">
+              <div class="section_title">Citation</div>
+              <p>
+                  If you found the paper useful, please cite it via:<br />
+              </p>
+              <div class="highlight wb">
+                  <pre class="chroma">
+                  <code>
               Birnie, C., Ravasi, M., Liu, S. and Alkhalifah, T., 2021. The potential of
               self-supervised networks for random noise suppression in seismic data. Artificial
               Intelligence in Geosciences, 2, pp.47-59
           </code>
       </pre>
-  </div>
-  <div class="highlight">
-      <pre class="chroma">
-      <code>
+              </div>
+              <div class="highlight">
+                  <pre class="chroma">
+                  <code>
           @article{birnie2021potential,
           title={The potential of self-supervised networks for random noise suppression in seismic data},
           author={Birnie, Claire and Ravasi, Matteo and Liu, Sixiu and Alkhalifah, Tariq},
@@ -636,13 +654,13 @@
           }
           </code>
       </pre>
-  </div>
-      <p>
-        <!-- See <a href="">paper</a> and <a href="">supplementary material</a> for details.  -->
-      </p>
-    </div>
+              </div>
+              <p>
+                  <!-- See <a href="">paper</a> and <a href="">supplementary material</a> for details.  -->
+              </p>
+          </div>
 
-  </div>
+</div>
 
 
 <!-- ====================================================== -->
