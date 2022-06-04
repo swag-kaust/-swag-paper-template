@@ -1,0 +1,699 @@
+
+<style type="text/css">
+  * { padding: 0; margin: 0;}
+ 
+     .container {
+         padding: 0px;
+         margin: 0px;
+         color: #404040;
+         font-size: 11pt;
+         font-family: 'Open Sans', sans-serif;
+         font-style: normal;
+         font-weight: 400;
+         color: #444;
+         /*background-color: #FFFDFA;*/
+         /*background: linear-gradient(to right, white, #eee, white);
+         background: -webkit-linear-gradient( right, white, #eee, white)*/
+         /*background-image: url("/PaintSwatches_1400x900.jpg");*/
+         /*font-family: 'textbook', arial, sans-serif;*/
+         /*margin-left: auto;
+         margin-right: auto;*/
+         /*max-width: 2000px;*/
+     }
+     body {
+         background-color: #FFFAFA !important;
+         background-color: #FAFAFA !important;
+     }
+ 
+ 
+    .section {
+       padding-top: 20px;
+       padding-bottom: 20px;
+     }
+ 
+ 
+    .title {
+       color: #000000;
+       font-family: 'Roboto Condensed', sans-serif;
+       padding-top: 10px;
+       padding-bottom: 25px;
+       font-size: 26pt;
+       line-height: 100%;
+       font-weight: 700;
+       color: #444;
+     }
+     
+     .author {
+       font-size: 13pt;
+     }
+ 
+     .section_title {
+       color: #000000;
+       font-family: 'Roboto Condensed', sans-serif;
+       /*padding-top: 10px;*/
+       /*padding-bottom: 10px;*/
+       font-size: 20pt;
+       line-height: 100%;
+       font-weight: 700;
+       padding-bottom: 10px;
+       color: #444;
+       /*margin-left: auto;
+         margin-right: auto;
+       /*line-height: 100%;*/
+       /*font-weight: 700;*/
+     }
+     
+   .shadow {
+       -webkit-box-shadow: 5px 5px 5px #aaa;
+       -moz-box-shadow: 5px 5px 5px #aaa;
+       box-shadow: 5px 5px 5px #aaa;
+       margin-bottom: 10px;
+   }
+ 
+   .aff {
+       margin-bottom: 16px;
+       /*max-width: 40px;*/
+       max-height: 30px
+   }
+ 
+ 
+ 
+     .img_authors {
+       position: relative;
+       max-width: 130px;
+       max-height: 130px
+     }
+ 
+     .img_links {
+       position: relative;
+       max-width: 70px;
+       max-height: 70px
+     }
+ 
+ 
+ .text {
+     position:relative;
+     line-height:2em;
+     overflow:hidden;
+ }
+ .fadingEffect {
+     position:absolute;
+     top:0; bottom:0; right:0;
+     width:100%;
+     background:#FFFAFA;
+     -moz-animation: showHide 5s ease-in alternate infinite; /* Firefox */
+     -webkit-animation: showHide 5s ease-in alternate infinite; /* Safari and Chrome */
+     -ms-animation: showHide 5s ease-in alternate infinite; /* IE10 */
+     -o-animation: showHide 5s ease-in alternate infinite; /* Opera */
+     animation: showHide 5s ease-in alternate infinite;
+ }
+ @-webkit-keyframes showHide { /* Chrome, Safari */
+     0% {width:100%}
+     40% {width:0%}
+     60% {width:0%;}
+     100% {width:100%;}
+ }
+ @-moz-keyframes showHide { /* FF */
+     0% {width:100%}
+     40% {width:0%}
+     60% {width:0%;}
+     100% {width:100%;}
+ }
+ @-ms-keyframes showHide { /* IE10 */
+     0% {width:100%}
+     40% {width:0%}
+     60% {width:0%;}
+     100% {width:100%;}
+ }
+ @-o-keyframes showHide { /* Opera */
+     0% {width:100%}
+     40% {width:0%}
+     60% {width:0%;}
+     100% {width:100%;}
+ }
+ @keyframes showHide {
+     0% {width:100%}
+     40% {width:0%}
+     60% {width:0%;}
+     100% {width:100%;}
+ }
+ 
+ 
+ #cf {
+   position:relative;
+   max-height:301px;
+   /*width:450px;*/
+ 
+   width:100%;
+   height:100%;
+   /*overflow:hidden; */
+   /*width:inherit;*/
+ 
+   /*max-height: auto;*/
+ 
+   /*margin:0 auto;*/
+ }
+ 
+ #cf img {
+   position:absolute ;
+   
+   max-height:401px;
+
+   /*height:100%;*/
+   /*width:100%;*/
+ 
+   opacity: 0;
+   left:0;
+   -webkit-transition: opacity 1s ease-in-out;
+   -moz-transition: opacity 1s ease-in-out;
+   -o-transition: opacity 1s ease-in-out;
+   transition: opacity 1s ease-in-out;
+   animation-name: cfFadeInOut;
+   animation-timing-function: ease-in-out;
+   animation-iteration-count: infinite;
+   animation-duration: 12s;  /* 3images * 4secs */
+ }
+ 
+ 
+ @keyframes cfFadeInOut {
+   /* fade out */
+   0% {
+     opacity:0;
+   }
+   5% {
+     opacity:1;
+   }
+   /* fade in */
+   14.28% {
+     opacity:1;
+   }
+   19.28% {
+     opacity:0;
+   }
+ }
+ 
+ #cf img:nth-of-type(7) {
+   animation-delay: 24s;
+ }
+ #cf img:nth-of-type(6) {
+   animation-delay: 20s;
+ }
+ #cf img:nth-of-type(5) {
+   animation-delay: 16s;
+ }
+ #cf img:nth-of-type(4) {
+   animation-delay: 12s;
+ }
+ #cf img:nth-of-type(3) {
+   animation-delay: 8s;
+ }
+ #cf img:nth-of-type(2) {
+   animation-delay: 4s;
+ }
+ #cf img:nth-of-type(1) {
+   animation-delay: 0s;
+ }
+ 
+ .row-centered {
+     text-align:center;
+ }
+ .col-centered {
+     display:inline-block;
+     float:none !important;
+     /* reset the text-align */
+     text-align:center;
+     /* inline-block space fix */
+     margin-right:-4px;
+     min-width: 170px;
+ }
+ 
+ html, body {
+   margin-top: 0px;
+   margin-bottom: 0px;
+   margin-left: 10px;
+   margin-right: 10px;
+   height: 100%;             /* need for iframe height 100% to work */
+ }
+ 
+ iframe {
+   box-sizing: border-box;   /* make the border size be included in the height */
+   /*display: block;            make them block to fix white space margin */
+   width: 100%;
+ }
+ 
+ .hint {
+   color: #A00;
+   font-size: 10pt;
+   margin-bottom: 10px;
+ }
+ 
+ .img-process {
+   /*width: 100%;*/
+   margin: 5px;
+   max-height: 200px; 
+   -webkit-transition: opacity 0.2s ease-in-out;
+   -moz-transition: opacity 0.2s ease-in-out;
+   -ms-transition: opacity 0.2s ease-in-out;
+   -o-transition: opacity 0.2s ease-in-out;
+   transition: opacity 0.2s ease-in-out;
+   opacity: 1;
+ }
+ .img-process:hover{
+   cursor: pointer;
+   opacity: 0.6;
+ }
+ 
+ .centeredd {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   -webkit-transform: translate(-50%, -50%);
+   -moz-transform: translate(-50%, -50%);
+   -o-transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+ }
+ 
+ </style>
+ 
+ <!doctype html>
+ <html lang="en">
+   <head>
+       <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       <title>SWAG Publication</title>
+       <meta property="og:image" content="https://swagroup.kaust.edu.sa/images/default-source/homepageimages/swag---new-logo.jpg?sfvrsn=e3c9e798_2&MaxWidth=250&MaxHeight=107&ScaleUp=false&Quality=High&Method=ResizeFitToAreaArguments&Signature=71FD4BD748A81E57E67CB9A68CC991B285D2C9ED"/>
+       <meta property="og:title" content="Seismic Wave Analysis - Publication item" />
+ 
+       <!-- Latest compiled and minified CSS -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ 
+       <!-- Optional theme -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"><!-- <link rel="stylesheet" href="../css/bootstrap-theme.min.css"> -->
+ 
+       <!-- Google fonts -->
+       <!-- <link href="../css/google-fonts.css" rel="stylesheet" type="text/css"> -->
+       <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Open+Sans:300italic,400italic,600italic,400,700,300,600" rel="stylesheet" type="text/css">
+ 
+       <!-- Photoswipe -->
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.css" rel="stylesheet">
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.css" rel="stylesheet">
+ 
+       <script type="text/x-mathjax-config">
+       MathJax.Hub.Config({
+         tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+         TeX: { equationNumbers: { autoNumber: "AMS" } },
+       });
+       </script>
+ 
+     <script type="text/javascript" async
+       src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+     </script>
+   <script>
+   function resizeIframe(obj) {
+     obj.style.height = 0;
+     obj.style.height = (obj.contentWindow.document.body.scrollHeight + 5) + 'px';
+   }
+ 
+ 
+ 
+ 
+   
+ </script>
+     <script language="JavaScript">
+ 
+       function resize_iframe()
+       {
+         obj = document.getElementById("myiframe")
+ 
+         obj.style.height = 0;
+         obj.style.height = (obj.contentWindow.document.body.scrollHeight) + 'px';
+         
+         document.getElementById("cf").style.height = document.getElementById("lastimage").height + 8;
+       }
+       window.onresize=resize_iframe; 
+       
+ 
+     </script>
+ 
+   </head>
+ 
+   <body>
+     <script src="zepto.min.js"></script>
+   <script>
+     window.addEventListener('message', function(event) {
+       if(height = event.data['height']) {
+         $('iframe').css('height', height + 'px')
+       }
+     });
+     
+ 
+     // var resizeEvent = new Event('resize');
+     // window.dispatchEvent(resizeEvent);
+     
+   </script>
+     <!-- ====================================================== -->
+     <!-- ===================== Header ========================= -->
+     <!-- ====================================================== -->
+     <center>
+      <div class="row section" style="margin-bottom: -24px">
+          <div class="col-sm-5" style="margin-left: 1px">
+            <img src="assets/images/KAUST_logo.png" class="img_links img-responsive">
+          </div>
+          <div class="col-sm-5" style="margin-right: 1px">
+              <img src="assets/images/SWAG_logo.png" class="img_links img-responsive">
+          </div>
+     </div>
+    </center>
+  
+    <hr>
+  
+   <div class="container">
+
+
+<!-- ====================================================== -->
+<!-- =========== To ADD your Research ===================== -->
+<!-- ========== START EDITING FROM HERE =================== -->
+<!-- ====================================================== -->
+
+ 
+     <!-- ====================================================== -->
+     <!-- ===================== TITLE ========================== -->
+     <!-- ====================================================== -->
+     <center>
+           <div class="title">
+            Single Reference Frequency Loss for Multifrequency Wavefield Representation Using Physics-Informed Neural Networks
+            </div>
+     </center>
+    
+     <center>
+      <div class="row row-eq-height" style="margin-bottom: -10px">
+        <div class="col-sm-12 col-sm-offset-2">
+          <div class="col-sm-4" style="margin-bottom: 10px">
+              <a href="https://swagroup.kaust.edu.sa/people/detail/xinquan-huang">
+                  <img src="assets/authors/XinquanHuang.jpg" class="img_authors img-circle">
+                  <div class="author"><span style="font-weight: 600">Xinquan Huang</span><br>KAUST</div>
+              </a>
+          </div>
+           <div class="col-sm-4" style="margin-bottom: 10px">
+            <a href="https://swagroup.kaust.edu.sa/people/detail/tariq-alkhalifah">
+                <img src="assets/authors/TariqAlkhalifah.png" class="shadow img_authors img-circle img-responsive">
+                <div class="author"><span style="font-weight: 600">Tariq Alkhalifah</span><br>KAUST</div>
+            </a>
+        </div>
+
+        </div>
+    </div>
+    </center>
+  
+ 
+     <!-- ====================================================== -->
+     <!-- ===================== LINKS ========================== -->
+     <!-- ====================================================== -->
+     
+     <center>
+      <div class="row section" style="margin-bottom: -12px">
+        <div class="col-sm-10 col-sm-offset-1">
+        <!-- <div class="col-sm-12 center"> -->
+          <div class="col-sm-3" style="margin-bottom: 12px">
+            <!-- <div class="col-sm-12"> -->
+              <a href="assets/xinquan-PINN-ref/Xinquan-Single_Reference_Frequency_Loss_for_Multifrequency_Wavefield_Representation_Using_Physics-Informed_Neural_Networks.pdf">
+                <img src="assets/images/pdf.svg" class="img_links img-responsive">
+                  <div class="author">Paper</div>
+              </a>
+            <!-- </div> -->
+          </div>
+          <div class="col-sm-3" style="margin-bottom: 12px">
+            <!-- <div class="col-sm-12"> -->
+              <a href="">
+                <img src="assets/images/pdf.svg" class="img_links img-responsive" >
+                  <div class="author">Supplementary Material</div>
+              </a>
+            <!-- </div> -->
+          </div>
+          <div class="col-sm-3" style="margin-bottom: 12px">
+            <!-- <div class="col-sm-12"> -->
+              <a href="https://ieeexplore.ieee.org/document/9779736?source=authoralert">
+                <img src="assets/images/pdf.svg" class="img_links img-responsive" >
+                  <div class="author">Paper (journal)</div>
+              </a>
+            <!-- </div> -->
+          </div>
+          <div class="col-sm-3" style="margin-bottom: 12px">
+            <!-- <div class="col-sm-12"> -->
+              <a href="https://github.com/swag-kaust" >
+                  <img src="assets/images/github.svg" class="img_links img-responsive">
+                  <div class="author">Code</div>
+              </a>
+            <!-- </div> -->
+          </div>
+        <!-- </div> -->
+      </div>
+    </div>
+    </center>
+  
+
+  <!-- ====================================================== -->
+  <!-- ===================== TEASER ============== -->
+  <!-- ====================================================== -->
+
+  <br>
+  <!-- <center> -->
+    <div class="row row-eq-height" style="margin-bottom: -10px">
+      <div class="col-sm-12 col-sm-offset-0">
+        <div class="col-sm-6" style="margin-bottom: 10px">
+          <br>
+          <div class="section_title">Highlights</div>
+          <ol style="list-style-type: circle">
+              <li>Single reference frequency loss function for multifrequency wavefield.</li>
+              <li>Mitigate the change in the spatial wavenumber over frequency by adapting the spatial scale to frequency.</li>
+              <li>Dynamic frequency weighting derivation.</li>
+              <li>Accuracy improvements seen in the frequency-domain wavefield prediction, time-domain snapshots, and estimated velocity, compared to vanilla PINN.</li>
+          </ol>
+        </div>
+        <div class="col-sm-6" style="margin-bottom: 10px">
+          <div id="cf">
+            <center>
+            <img src="assets/xinquan-PINN-ref/pinnref-real.png" class="img-responsive" id="firstimage"/>
+            <img src="assets/xinquan-PINN-ref/pinnref-imag.png" class="img-responsive"/>
+            <img src="assets/xinquan-PINN-ref/pinnref-time-domain.png" class="img-responsive" id="lastimage"/>
+            </center>
+          </div>
+        </div>
+
+      </div>
+  </div>
+  <!-- </center> -->
+
+  <!-- <center>
+    <div class="row section center row-eq-height">
+      <div class="col center col-sm-8 col-sm-offset-2">
+        <div id="cf">
+          <center>
+          <img src="assets/birnie-self-supervised-networks-for-random-noise-suppression/Teaser.jpg" class="img-responsive" id="firstimage"/>
+          <img src="assets/birnie-self-supervised-networks-for-random-noise-suppression/Teaser.jpg" class="img-responsive"/>
+          <img src="assets/birnie-self-supervised-networks-for-random-noise-suppression/Teaser.jpg" class="img-responsive"/>
+          <img src="assets/birnie-self-supervised-networks-for-random-noise-suppression/Teaser.jpg" class="img-responsive" id="lastimage"/>
+          </center>
+        </div>
+        <span style="font-size:14px"><i></i>
+        </span>
+      </div>
+    </div>
+  </center> -->
+  <hr>
+  
+
+
+     <!-- ====================================================== -->
+     <!-- ===================== Abstract ======================= -->
+     <!-- ====================================================== -->
+     <div class="row section">
+       <div class="section_title">Abstract</div>
+       <p> 
+        Physics-informed neural networks (PINNs) can offer approximate multidimensional functional solutions to the Helmholtz equation that is flexible, requires low memory, and has no limitations on the shape of the solution space. However, the neural network (NN) training can be costly, and the cost dramatically increases as we train for multifrequency wavefields by adding frequency as an additional input to the NN multi- dimensional function. In this case, the often large variation of the wavefield features (specifically wavelength) with frequency adds more complexity to the NN training. Thus, we propose a new loss function for the NN multidimensional input training that allows us to seamlessly include frequency as a dimension. We specifically utilize the linear relation between frequency and wavenumber (the wavefield space representation) to incorporate a reference frequency scaling to the loss function. As a result, the effective wavenumber of the wavefield solution as a function of frequency remains almost stationary, which reduces the learning burden on the NN function. We demonstrate the effectiveness of this modified loss function on a layered model. 
+       </p>
+     </div>
+     
+
+     <!-- ====================================================== -->
+     <!-- ================== Theory ============================ -->
+     <!-- ====================================================== -->
+     <div class="row section">
+      <div class="section_title">Theory</div>
+      
+      When we double the frequency, the first and third terms will quadruple. To keep the Helmholtz equation stationary, we need the second term (the Laplacian operator acting on $\delta \mathbf{U}$) to quadruple as well. To do so, we rescale the spatial axes to maintain the effective wavenumber. Thus, when we double the frequency, we rescale the spatial coordinates by half. For simplicity, we use three frequency-domain wavefields to demonstrate the process. We immediately arrive at the conclusion that the wavefield by the frequency upscaling (8-Hz wavefield) and the wavefield by spatial rescaling (4-Hz wavefield after spatial rescaling) share similar wavenumber content satisfying the Helmholtz equation, which means that we just need one frequency here to describe two wavefields with different frequencies.
+      <p>
+          <center>
+              <p>
+                  <img src="assets/xinquan-PINN-ref/pinnsref.png" class="img-responsive">
+                  <!-- <br /> <em>Fig. 1</em> Schematic illustration of the Noise2Void denoising procedure. -->
+              </p>
+          </center>
+          <br>
+      
+      <p>
+        <br>
+        <!-- <center> -->
+          <div class="row row-eq-height" style="margin-bottom: -10px">
+            <div class="col-sm-12 col-sm-offset-0">
+              <div class="col-sm-6" style="margin-bottom: 10px">
+                <br>
+                The new single reference frequency loss function:
+                \begin{equation}
+                  \mathcal{L} = \frac{1}{N} \sum_{i=1}^{N}\left|\omega_{ref}^{2} \mathbf{m}^{i} \Phi(\theta, \mathbf{x}^i)+\frac{\partial^2\Phi(\theta, \mathbf{x}^i)}{\partial^2(\alpha\mathbf{x}^i)}+\omega_{ref}^{2} \delta \mathbf{m}^{i} U_{0}^i\right|_{2}^{2},
+                  \label{srl} 
+                \end{equation}
+                where $\alpha$ is the scaling factor, equal to the ratio of the current frequency to a reference frequency, $\omega_{ref}$ is the reference angular frequency and $N$ is the number of training samples. In practice, we implement equation \ref{srl}~by utilizing a computational graph. 
+              </div>
+              <div class="col-sm-6" style="margin-bottom: 10px">
+                  <center>
+                  <img src="assets/xinquan-PINN-ref/algorithm.png" width="400" height="250" class="img-responsive">
+                  </center>
+              </div>
+      
+            </div>
+        </div>
+          <br>
+
+
+          <!-- ====================================================== -->
+          <!-- ================== Results =========================== -->
+          <!-- ====================================================== -->
+          <div class="row section">
+              <div class="section_title">Results</div>
+
+<p>
+              It is obvious that, with one more input dimension, the representation of NNs for the wavefield becomes harder to obtain via conventional training. On the other hand, our proposed loss function provided reasonable results considering the larger (four) dimensional space, and we obtain a much more accurate amplitude and phase representation of the wavefield. We also calculated the velocity models from the PINN predictions using \ref{srl}. We can observe that the PINN with our proposed loss function reconstructs the details of the velocity model much better than the vanilla method.
+              </p>
+              <p>
+              Transforming the multifrequency wavefield into time-domain records could help us understand better what parts of the wavefield we managed to predict accurately in time. Using inverse Fourier transform, we obtain time-domain snapshots for the numerical implementation, the conventional PINN, and our proposed PINN of the multifrequency wavefield representation. Fig. 7 shows the time-domain snapshot at 1.0 s transformed from 3- to 8-Hz wavefields with a frequency interval of 0.2 Hz. We observe that the time-snap shot obtained by the model trained with a single reference frequency loss function shows more agreement with the numerical result compared to the vanilla multifrequency loss function, specifically the key reflection corresponding to the high-velocity perturbation at 2.0 km.
+              </p>
+
+              <p>
+                  <center> 
+
+               <img src="assets/xinquan-PINN-ref/results.001.png" class="img-responsive">
+          </div>
+          <!--<center>
+              <p>
+                  <img src="assets/birnie-self-supervised-networks-for-random-noise-suppression/Results.png" class="img-responsive">-->
+                  <!-- <br /> <em>Fig. 1</em> Schematic illustration of the Noise2Void denoising procedure. -->
+              <!--</p>
+          </center>-->
+          <hr>
+
+          <!-- ====================================================== -->
+          <!-- ================== References ======================== -->
+          <!-- ====================================================== -->
+          <div class="row section">
+              <div class="section_title">Citation</div>
+              <p>
+                  If you found the paper useful, please cite it via:<br />
+              </p>
+              <div class="highlight wb">
+                  <pre class="chroma">
+                  <code>
+X. Huang and T. Alkhalifah, "Single Reference Frequency Loss for Multifrequency Wavefield Representation Using Physics-Informed Neural Networks," in IEEE Geoscience and Remote Sensing Letters, vol. 19, pp. 1-5, 2022, Art no. 3007105, doi: 10.1109/LGRS.2022.3176867.
+          </code>
+      </pre>
+              </div>
+              <div class="highlight">
+                  <pre class="chroma">
+                  <code>
+@article{huang2022PINNref,
+  author={Huang, Xinquan and Alkhalifah, Tariq},
+  journal={IEEE Geoscience and Remote Sensing Letters}, 
+  title={Single Reference Frequency Loss for Multifrequency Wavefield Representation Using Physics-Informed Neural Networks}, 
+  year={2022},
+  volume={19},
+  pages={1-5},
+  doi={10.1109/LGRS.2022.3176867}}
+          </code>
+      </pre>
+              </div>
+              <p>
+                  <!-- See <a href="">paper</a> and <a href="">supplementary material</a> for details.  -->
+              </p>
+          </div>
+
+</div>
+
+
+<!-- ====================================================== -->
+<!-- =========== To ADD your Research ===================== -->
+<!-- ============== STOP EDITING HERE ===================== -->
+<!-- ====================================================== -->
+    
+
+     <!-- ====================================================== -->
+     <!-- ===================== Footer ========================= -->
+     <!-- ====================================================== -->
+
+     
+  <center>
+      <div class="container">
+      </div><div class="panel-footer">
+        <p class="footer-company-name">All Rights Reserved. &copy; 2022 
+          <a href="https://swagroup.kaust.edu.sa/">Seismic Wave Analysis Group</a>
+       </p>
+      </div>
+      </div><!-- end container -->
+  </center>
+     
+ 
+     <!-- Optional JavaScript -->
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script> -->
+     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> -->
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+     
+ 
+     <script type="text/javascript">
+ 
+       function change_height_cf(el) {
+         if (el.height > 0) {
+                document.getElementById("cf").style.height = el.height + 8;
+         };
+       };
+       
+ 
+        $(document).ready(function(){
+             $('#firstimage').on('load', function(){
+                console.log(2);
+                 change_height_cf(document.getElementById("firstimage"));
+             });
+ 
+             if ($('#firstimage')[0].complete) {
+               console.log(3);
+               change_height_cf(document.getElementById("firstimage"));
+             };
+ 
+             $('#lastimage').on('load', function(){
+               console.log(2);
+               change_height_cf(document.getElementById("lastimage"));
+             });
+             if ($('#lastimage')[0].complete) {
+               console.log(3);
+               change_height_cf(document.getElementById("lastimage"));
+             };
+ 
+           });
+       
+     </script>
+     
+ 
+    <!-- photoswipe -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js"></script>
+ 
+ 
+     <script src="img-gallery.js"></script>
+   
+ </body>
+ </html>
+  
+ 
