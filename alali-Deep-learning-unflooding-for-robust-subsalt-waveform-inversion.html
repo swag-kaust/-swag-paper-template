@@ -1,0 +1,817 @@
+
+<style type="text/css">
+  * { padding: 0; margin: 0;}
+ 
+     .container {
+         padding: 0px;
+         margin: 0px;
+         color: #404040;
+         font-size: 11pt;
+         font-family: 'Open Sans', sans-serif;
+         font-style: normal;
+         font-weight: 400;
+         color: #444;
+         /*background-color: #FFFDFA;*/
+         /*background: linear-gradient(to right, white, #eee, white);
+         background: -webkit-linear-gradient( right, white, #eee, white)*/
+         /*background-image: url("/PaintSwatches_1400x900.jpg");*/
+         /*font-family: 'textbook', arial, sans-serif;*/
+         /*margin-left: auto;
+         margin-right: auto;*/
+         /*max-width: 2000px;*/
+     }
+     body {
+         background-color: #FFFAFA !important;
+         background-color: #FAFAFA !important;
+     }
+ 
+ 
+    .section {
+       padding-top: 20px;
+       padding-bottom: 20px;
+     }
+ 
+ 
+    .title {
+       color: #000000;
+       font-family: 'Roboto Condensed', sans-serif;
+       padding-top: 10px;
+       padding-bottom: 25px;
+       font-size: 26pt;
+       line-height: 100%;
+       font-weight: 700;
+       color: #444;
+     }
+     
+     .author {
+       font-size: 13pt;
+     }
+ 
+     .section_title {
+       color: #000000;
+       font-family: 'Roboto Condensed', sans-serif;
+       /*padding-top: 10px;*/
+       /*padding-bottom: 10px;*/
+       font-size: 20pt;
+       line-height: 100%;
+       font-weight: 700;
+       padding-bottom: 10px;
+       color: #444;
+       /*margin-left: auto;
+         margin-right: auto;
+       /*line-height: 100%;*/
+       /*font-weight: 700;*/
+     }
+     
+   .shadow {
+       -webkit-box-shadow: 5px 5px 5px #aaa;
+       -moz-box-shadow: 5px 5px 5px #aaa;
+       box-shadow: 5px 5px 5px #aaa;
+       margin-bottom: 10px;
+   }
+ 
+   .aff {
+       margin-bottom: 16px;
+       /*max-width: 40px;*/
+       max-height: 30px
+   }
+ 
+ 
+ 
+     .img_authors {
+       position: relative;
+       max-width: 130px;
+       max-height: 130px
+     }
+ 
+     .img_links {
+       position: relative;
+       max-width: 70px;
+       max-height: 70px
+     }
+ 
+ 
+ .text {
+     position:relative;
+     line-height:2em;
+     overflow:hidden;
+ }
+ .fadingEffect {
+     position:absolute;
+     top:0; bottom:0; right:0;
+     width:100%;
+     background:#FFFAFA;
+     -moz-animation: showHide 5s ease-in alternate infinite; /* Firefox */
+     -webkit-animation: showHide 5s ease-in alternate infinite; /* Safari and Chrome */
+     -ms-animation: showHide 5s ease-in alternate infinite; /* IE10 */
+     -o-animation: showHide 5s ease-in alternate infinite; /* Opera */
+     animation: showHide 5s ease-in alternate infinite;
+ }
+ @-webkit-keyframes showHide { /* Chrome, Safari */
+     0% {width:100%}
+     40% {width:0%}
+     60% {width:0%;}
+     100% {width:100%;}
+ }
+ @-moz-keyframes showHide { /* FF */
+     0% {width:100%}
+     40% {width:0%}
+     60% {width:0%;}
+     100% {width:100%;}
+ }
+ @-ms-keyframes showHide { /* IE10 */
+     0% {width:100%}
+     40% {width:0%}
+     60% {width:0%;}
+     100% {width:100%;}
+ }
+ @-o-keyframes showHide { /* Opera */
+     0% {width:100%}
+     40% {width:0%}
+     60% {width:0%;}
+     100% {width:100%;}
+ }
+ @keyframes showHide {
+     0% {width:100%}
+     40% {width:0%}
+     60% {width:0%;}
+     100% {width:100%;}
+ }
+ 
+ 
+ #cf {
+   position:relative;
+   max-height:301px;
+   /*width:450px;*/
+ 
+   width:100%;
+   height:100%;
+   /*overflow:hidden; */
+   /*width:inherit;*/
+ 
+   /*max-height: auto;*/
+ 
+   /*margin:0 auto;*/
+ }
+ 
+ #cf img {
+   position:absolute ;
+   
+   max-height:401px;
+
+   /*height:100%;*/
+   /*width:100%;*/
+ 
+   opacity: 0;
+   left:0;
+   -webkit-transition: opacity 1s ease-in-out;
+   -moz-transition: opacity 1s ease-in-out;
+   -o-transition: opacity 1s ease-in-out;
+   transition: opacity 1s ease-in-out;
+   animation-name: cfFadeInOut;
+   animation-timing-function: ease-in-out;
+   animation-iteration-count: infinite;
+   animation-duration: 20s;  /* 5images * 4secs */
+ }
+ 
+ 
+ @keyframes cfFadeInOut {
+   /* fade out */
+   0% {
+     opacity:0;
+   }
+   5% {
+     opacity:1;
+   }
+   /* fade in */
+   14.28% {
+     opacity:1;
+   }
+   19.28% {
+     opacity:0;
+   }
+ }
+ 
+ #cf img:nth-of-type(7) {
+   animation-delay: 24s;
+ }
+ #cf img:nth-of-type(6) {
+   animation-delay: 20s;
+ }
+ #cf img:nth-of-type(5) {
+   animation-delay: 16s;
+ }
+ #cf img:nth-of-type(4) {
+   animation-delay: 12s;
+ }
+ #cf img:nth-of-type(3) {
+   animation-delay: 8s;
+ }
+ #cf img:nth-of-type(2) {
+   animation-delay: 4s;
+ }
+ #cf img:nth-of-type(1) {
+   animation-delay: 0s;
+ }
+ 
+ .row-centered {
+     text-align:center;
+ }
+ .col-centered {
+     display:inline-block;
+     float:none !important;
+     /* reset the text-align */
+     text-align:center;
+     /* inline-block space fix */
+     margin-right:-4px;
+     min-width: 170px;
+ }
+ 
+ html, body {
+   margin-top: 0px;
+   margin-bottom: 0px;
+   margin-left: 10px;
+   margin-right: 10px;
+   height: 100%;             /* need for iframe height 100% to work */
+ }
+ 
+ iframe {
+   box-sizing: border-box;   /* make the border size be included in the height */
+   /*display: block;            make them block to fix white space margin */
+   width: 100%;
+ }
+ 
+ .hint {
+   color: #A00;
+   font-size: 10pt;
+   margin-bottom: 10px;
+ }
+ 
+ .img-process {
+   /*width: 100%;*/
+   margin: 5px;
+   max-height: 200px; 
+   -webkit-transition: opacity 0.2s ease-in-out;
+   -moz-transition: opacity 0.2s ease-in-out;
+   -ms-transition: opacity 0.2s ease-in-out;
+   -o-transition: opacity 0.2s ease-in-out;
+   transition: opacity 0.2s ease-in-out;
+   opacity: 1;
+ }
+ .img-process:hover{
+   cursor: pointer;
+   opacity: 0.6;
+ }
+ 
+ .centeredd {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   -webkit-transform: translate(-50%, -50%);
+   -moz-transform: translate(-50%, -50%);
+   -o-transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+ }
+
+
+table {
+  /*font-family: arial, sans-serif;*/
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #000000 ;
+  text-align: left;
+  padding: 8px;
+}
+
+/*tr:nth-child(even) {
+  background-color: #dddddd;
+}*/
+</style>
+ 
+ </style>
+ 
+ <!doctype html>
+ <html lang="en">
+   <head>
+       <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       <title>SWAG Publication</title>
+       <meta property="og:image" content="https://swagroup.kaust.edu.sa/images/default-source/homepageimages/swag---new-logo.jpg?sfvrsn=e3c9e798_2&MaxWidth=250&MaxHeight=107&ScaleUp=false&Quality=High&Method=ResizeFitToAreaArguments&Signature=71FD4BD748A81E57E67CB9A68CC991B285D2C9ED"/>
+       <meta property="og:title" content="Seismic Wave Analysis - Publication item" />
+ 
+       <!-- Latest compiled and minified CSS -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ 
+       <!-- Optional theme -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"><!-- <link rel="stylesheet" href="../css/bootstrap-theme.min.css"> -->
+ 
+       <!-- Google fonts -->
+       <!-- <link href="../css/google-fonts.css" rel="stylesheet" type="text/css"> -->
+       <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Open+Sans:300italic,400italic,600italic,400,700,300,600" rel="stylesheet" type="text/css">
+ 
+       <!-- Photoswipe -->
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.css" rel="stylesheet">
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.css" rel="stylesheet">
+ 
+       <script type="text/x-mathjax-config">
+       MathJax.Hub.Config({
+         tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+         TeX: { equationNumbers: { autoNumber: "AMS" } },
+       });
+       </script>
+ 
+     <script type="text/javascript" async
+       src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+     </script>
+   <script>
+   function resizeIframe(obj) {
+     obj.style.height = 0;
+     obj.style.height = (obj.contentWindow.document.body.scrollHeight + 5) + 'px';
+   }
+ 
+ 
+ 
+ 
+   
+ </script>
+     <script language="JavaScript">
+ 
+       function resize_iframe()
+       {
+         obj = document.getElementById("myiframe")
+ 
+         obj.style.height = 0;
+         obj.style.height = (obj.contentWindow.document.body.scrollHeight) + 'px';
+         
+         document.getElementById("cf").style.height = document.getElementById("lastimage").height + 8;
+       }
+       window.onresize=resize_iframe; 
+       
+ 
+     </script>
+ 
+   </head>
+ 
+   <body>
+     <script src="zepto.min.js"></script>
+   <script>
+     window.addEventListener('message', function(event) {
+       if(height = event.data['height']) {
+         $('iframe').css('height', height + 'px')
+       }
+     });
+     
+ 
+     // var resizeEvent = new Event('resize');
+     // window.dispatchEvent(resizeEvent);
+     
+   </script>
+     <!-- ====================================================== -->
+     <!-- ===================== Header ========================= -->
+     <!-- ====================================================== -->
+     <center>
+      <div class="row section" style="margin-bottom: -24px">
+          <div class="col-sm-5" style="margin-left: 1px">
+            <img src="assets/images/KAUST_logo.png" class="img_links img-responsive">
+          </div>
+          <div class="col-sm-5" style="margin-right: 1px">
+              <img src="assets/images/SWAG_logo.png" class="img_links img-responsive">
+          </div>
+     </div>
+    </center>
+  
+    <hr>
+  
+   <div class="container">
+
+
+<!-- ====================================================== -->
+<!-- =========== To ADD your Research ===================== -->
+<!-- ========== START EDITING FROM HERE =================== -->
+<!-- ====================================================== -->
+
+ 
+     <!-- ====================================================== -->
+     <!-- ===================== TITLE ========================== -->
+     <!-- ====================================================== -->
+     <center>
+           <div class="title">
+            Deep learning unflooding for robust subsalt waveform inversion
+            </div>
+     </center>
+    
+     <center>
+      <div class="row row-eq-height" style="margin-bottom: -10px">
+        <div class="col-sm-12 col-sm-offset-0">
+          <div class="col-sm-3" style="margin-bottom: 10px">
+              <a href="https://swagroup.kaust.edu.sa/people/detail/abdullahalali">
+                  <img src="assets/authors/AbdullahAlali.png" class="img_authors img-circle">
+                  <div class="author"><span style="font-weight: 600">Abdullah Alali</span><br>KAUST</div>
+              </a>
+          </div>
+          <div class="col-sm-3" style="margin-bottom: 10px">
+              <a href="https://vkazei.com/">
+                  <img src="assets/authors/VladimirKazei.jpg" class="shadow img_authors img-circle img-responsive">
+                  <div class="author"><span style="font-weight: 600">Vladimir Kazei</span><br>Aramco Americas</div>
+              </a>
+          </div>
+          <div class="col-sm-3" style="margin-bottom: 10px">
+              <a href="https://www.linkedin.com/in/mahesh-kalita/?originalSubdomain=in">
+                  <img src="assets/authors/MaheshKalita.jpg" class="shadow img_authors img-circle img-responsive">
+                  <div class="author"><span style="font-weight: 600">mahesh Kalita</span><br>KAUST, Currently Shearwater</div>
+              </a>
+          </div>
+          <div class="col-sm-3" style="margin-bottom: 10px">
+            <a href="https://swagroup.kaust.edu.sa/people/detail/tariq-alkhalifah">
+                <img src="assets/authors/TariqAlkhalifah.png" class="shadow img_authors img-circle img-responsive">
+                <div class="author"><span style="font-weight: 600">Tariq Alkhalifah</span><br>KAUST</div>
+            </a>
+        </div>
+
+        </div>
+    </div>
+    </center>
+  
+ 
+     <!-- ====================================================== -->
+     <!-- ===================== LINKS ========================== -->
+     <!-- ====================================================== -->
+     
+     <center>
+      <div class="row section" style="margin-bottom: -12px">
+        <div class="col-sm-10 col-sm-offset-1">
+        <!-- <div class="col-sm-12 center"> -->
+          <div class="col-sm-3" style="margin-bottom: 12px">
+            <!-- <div class="col-sm-12"> -->
+              <a href="assets/paper-pdf/alali-Deep learning unflooding for robust subsalt waveform inversion.pdf">
+                <img src="assets/images/pdf.svg" class="img_links img-responsive">
+                  <div class="author">Pre-print</div>
+              </a>
+            <!-- </div> -->
+          </div>
+          <div class="col-sm-3" style="margin-bottom: 12px">
+            <!-- <div class="col-sm-12"> -->
+              <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/1365-2478.13193">
+                <img src="assets/images/pdf.svg" class="img_links img-responsive" >
+                  <div class="author">Paper (journal)</div>
+              </a>
+            <!-- </div> -->
+          </div>
+          <div class="col-sm-3" style="margin-bottom: 12px">
+            <!-- <div class="col-sm-12"> -->
+              <a href="https://www.earthdoc.org/content/papers/10.3997/2214-4609.202210812">
+                <img src="assets/images/pdf.svg" class="img_links img-responsive" >
+                  <div class="author">Conference paper (Field data)</div>
+              </a>
+            <!-- </div> -->
+          </div>
+          <div class="col-sm-3" style="margin-bottom: 12px">
+            <!-- <div class="col-sm-12"> -->
+              <a href="https://github.com/alaliaa/Unet_Salt_Unflooding" >
+                  <img src="assets/images/github.svg" class="img_links img-responsive">
+                  <div class="author">Code</div>
+              </a>
+            <!-- </div> -->
+          </div>
+        <!-- </div> -->
+      </div>
+    </div>
+    </center>
+  
+
+  <!-- ====================================================== -->
+  <!-- ===================== TEASER ============== -->
+  <!-- ====================================================== -->
+
+  <br>
+  <!-- <center> -->
+    <div class="row row-eq-height" style="margin-bottom: -10px">
+      <div class="col-sm-12 col-sm-offset-0">
+        <div class="col-sm-6" style="margin-bottom: 10px">
+          <br>
+          <div class="section_title">Highlights</div>
+          <ol style="list-style-type: circle">
+              <li>Application of an automatic unflooding in the FWI framework.</li>
+              <li>Effiecient generation of training data using 1D FWI. </li>
+              <li>Analyzing three scienarios in generating training data.</li>
+              <li>Application on synthetic/field data with the absent of low frequencies and long offsets.</li>
+          </ol>
+        </div>
+        <div class="col-sm-6" style="margin-bottom: 10px">
+          <div id="cf">
+            <center>
+            <img src="assets/alali-Deep-learning-unflooding-for-robust-subsalt-waveform-inversion/BP_f.png" class="img-responsive" id="firstimage" />
+            <img src="assets/alali-Deep-learning-unflooding-for-robust-subsalt-waveform-inversion/BP_inv.png" class="img-responsive"/>
+            <img src="assets/alali-Deep-learning-unflooding-for-robust-subsalt-waveform-inversion/BP_inv_unflood_3rd_exp.png" class="img-responsive" />
+            <img src="assets/alali-Deep-learning-unflooding-for-robust-subsalt-waveform-inversion/BP_inv2_3rd.png" class="img-responsive" />
+            <img src="assets/alali-Deep-learning-unflooding-for-robust-subsalt-waveform-inversion/BP_t.png" class="img-responsive"  id="lastimage" />
+            </center>
+          </div>
+        </div>
+
+      </div>
+  </div>
+  <!-- </center> -->
+
+  <!-- <center>
+    <div class="row section center row-eq-height">
+      <div class="col center col-sm-8 col-sm-offset-2">
+        <div id="cf">
+          <center>
+          <img src="assets/birnie-self-supervised-networks-for-random-noise-suppression/Teaser.jpg" class="img-responsive" id="firstimage"/>
+          <img src="assets/birnie-self-supervised-networks-for-random-noise-suppression/Teaser.jpg" class="img-responsive"/>
+          <img src="assets/birnie-self-supervised-networks-for-random-noise-suppression/Teaser.jpg" class="img-responsive"/>
+          <img src="assets/birnie-self-supervised-networks-for-random-noise-suppression/Teaser.jpg" class="img-responsive" id="lastimage"/>
+          </center>
+        </div>
+        <span style="font-size:14px"><i></i>
+        </span>
+      </div>
+    </div>
+  </center> -->
+  <hr>
+  
+
+
+     <!-- ====================================================== -->
+     <!-- ===================== Abstract ======================= -->
+     <!-- ====================================================== -->
+     <div class="row section">
+       <div class="section_title">Abstract</div>
+       <p> 
+        Full-waveform inversion (FWI), a popular technique that promises high-resolution models, 
+        has helped in improving the salt definition in inverted velocity models. 
+        The success of the inversion relies heavily on having prior knowledge of the salt, 
+        and using advanced acquisition technology with long offsets and low frequencies. 
+        Salt bodies are often constructed by recursively picking the top and bottom of the salt from seismic images corresponding to tomography models, 
+        combined with flooding techniques. The process is time-consuming and highly prone to error, especially in picking the bottom of the salt (BoS). 
+        Many studies suggest performing FWI with long offsets and low frequencies after constructing the salt bodies to correct the miss-interpreted boundaries. 
+        </p>
+        <p>
+        Here, we focus on detecting the BoS automatically by utilizing deep learning tools. We specifically generate many random 1D models, 
+        containing or free of salt bodies, and calculate the corresponding shot gathers. We then apply FWI starting with salt flooded versions of those models, 
+        and the results of the FWI become inputs to the neural network, whereas the corresponding true 1D models are the output. The network is trained in a regression manner to 
+        detect the BoS and estimate the subsalt velocity. We analyze three scenarios in creating the training datasets and test their performance on the 2D BP 2004 salt model. 
+        We show that when the network succeeds in estimating the subsalt velocity, the requirement of low frequencies and long offsets are somewhat mitigated. We further apply 
+        the approach on a vintage field data obtained from the GOM area with challenging acquesition parameters. 
+        In general, this work allows us to merge the top-to-bottom approach with FWI, save the BoS picking time, and empower FWI to converge in the absence of low frequencies 
+        and long offsets in the data.
+       </p>
+
+       <hr>       
+     </div>
+     
+
+     <!-- ====================================================== -->
+     <!-- ================== Theory ============================ -->
+     <!-- ====================================================== -->
+     <div class="row section">
+      <div class="section_title">Workflow</div>
+      <p>
+      Applying FWI to a flooded salt model should reveal some features of the BoS, such as a sharp 
+      drop in the velocity at the BoS depth. These features (velocity drops) can be automatically captured
+      using a neural network to unflood the salt at the BoS. If the network is trained in a regression fashion, 
+      the network will estimate the subsalt velocity allowing a better inversion in a subsequence FWI. 
+      Having a good initial subsalt velocity reduces the requirement of using long offsets and low frequencies. We illustrate this workflow
+      </p>
+
+
+          <center>
+              <p>
+                  <img src="assets/alali-Deep-learning-unflooding-for-robust-subsalt-waveform-inversion/workflow2.png" class="img-responsive" width="900"  ">
+                  <!-- <br /> <em>Fig. 1</em> Schematic illustration of the Noise2Void denoising procedure. -->
+              </p>
+          </center>
+          <br>
+          <hr>
+     </div>
+          <!-- ====================================================== -->
+          <!-- ================== Training =========================== -->
+          <!-- ====================================================== -->
+          <div class="row section">
+              <div class="section_title">Training</div>
+        <p>
+	        Training a network requires large and diverse datasets to cover all the possible scenarios in the application. 
+          The input to our network is FWI results; thus, we will need many FWI implementations on various plausible models. Therefore, 
+          we focus the training on 1D models, where the FWI requires modelling a single shot gather. This should be fine considering 
+          that flooding and unflooding are often handled along the vertical dimension. In addition, in 1D models, the gradient can be 
+          computed using a few shots by laterally stacking the gradient, which simulates the effect of full fold coverage.
+          We adapt a U-net architecture as our neural network. U-net is commonly used in segmentation tasks and has been widely used for salt detection as a classifier.
+          Normally U-net is applied to two-dimensional (2D) images. Here, we modify the structure to accept one-dimensional (1D) inputs by using 1D convolutional layers instead of 2D layers.
+          The input to the network consists of two channels: the FWI result of the flooded model and the initial flooded model used for the inversion. Including the initial model 
+          in the input affects the prediction in areas that do not contain salts by using information from the initial model. 
+          The output of the network will be the unflooded model. 
+
+        </p>
+
+          <center>
+              <p>
+                  <img src="assets/alali-Deep-learning-unflooding-for-robust-subsalt-waveform-inversion/Unet-wokflow.png" class="img-responsive" width=900  ">
+                  <!-- <br /> <em>Fig. 1</em> Schematic illustration of the Noise2Void denoising procedure. -->
+              </p>
+          </center>
+          <br>
+
+          <hr>
+        </div>
+
+
+          <!-- ====================================================== -->
+          <!-- ================== Results =========================== -->
+          <!-- ====================================================== -->
+          <div class="row section">
+              <div class="section_title">Experiments </div>
+              <p>
+              We test the proposed method on the left part of the BP 2004 benchmark model and vintage field data from the Gulf of Mexico. 
+              Both synthetic and real data miss the low frequencies content and have limited offsets. 
+	            We perform full-waveform inversion (FWI) with total variation (TV) on a flooded version of the models. As expected, 
+              FWI alone could not correct the subsalt velocity. However, we can see the signatures of the BoS.
+              </p>
+              <p>
+                We ran three experiments on the synthetic BP data. The difference between the three experiments lay in the training datasets.  
+                In all the experiments, the network succeeds in unflooding the salt. However, the experiments show that 
+                to estimate a good subsalt velocity, the training data has to contain some information about the target model. A final 
+                FWI is then applied to the unflooded models. The final FWI shows improvements in the subsalt velocity in the second and the third scenarios, even with 
+                the limited offset and the absence of low frequencies. This is courtesy of having good initial models by the network unflooding.  
+              </p>
+              <p>
+                The unflooding for the field GOM data seems to have some artifacts. The black arrows show areas where the network detected what seemed by 
+                the final FWI the actual base, but the network did not unflood at those positions. This could be due to many factors such as inaccuracy of the 
+                top of the salt or hetrogeniouty within the salt, which the network is not learn to deal with. To validate the field results, we apply reverse time migration 
+                on the final inversion result and shows common image angle gathers (CIG) to test. The CIG shows descent flattness at the  top and the detected base of the salt.
+                The data is contaminated with multiples from the salt which is appearant from the image and explain why the CIG shows higher velocity at the deeper parts. Thus, 
+                to better validate this data set, salt multiples should be removed from the data. 
+	<br> <br>
+
+	<table>
+	  <tr>
+	    <td>Experiment 1 </td>
+	    <td>The data is created arbitrary with no geological knowledge
+	about the targeted BP model </td>
+	  </tr>
+	  <tr>
+	    <td>Experiment 2</td>
+	    <td>Some features are modified to better match the BP model
+	such as the water depth and the maximum velocity of the
+	sediments</td>
+	  </tr>
+	  <tr>
+	    <td>Experiment 3</td>
+	    <td>The average velocity of the sediments, excluding the
+	salt, were used as a general trend in creating the training datasets</td>
+	  </tr>
+
+	</table>
+
+          <br> <br>
+
+          <div class="section_title">Synthetic BP salt data</div>
+          <center>
+              <p>
+                  <img src="assets/alali-Deep-learning-unflooding-for-robust-subsalt-waveform-inversion/Results-BP-Unflooding.png" class="img-responsive" width=900  ">
+
+              </p>
+          </center>
+          <br>
+
+
+        </div>
+
+          <div class="row section">
+              <div class="section_title">Field GOM data</div>
+
+              <center>
+                <p>
+                    <img src="assets/alali-Deep-learning-unflooding-for-robust-subsalt-waveform-inversion/Results-GOMUnflooding.png" class="img-responsive" width=1300  ">
+  
+                </p>
+            </center>              
+
+
+
+
+
+
+
+          </div>
+
+          <!-- ====================================================== -->
+          <!-- ================== References ======================== -->
+          <!-- ====================================================== -->
+          <div class="row section">
+              <div class="section_title">Citation</div>
+              <p>
+                  If you found the paper useful, please cite it via:<br />
+              </p>
+              <div class="highlight wb">
+                  <pre class="chroma">
+                  <code>
+          Alali, A., Kazei, V., Kalita, M., & Alkhalifah, T. (2022). Deep learning unflooding for
+          robust subsalt waveform inversion. Geophysical prospecting.
+          </code>
+      </pre>
+              </div>
+              <div class="highlight">
+                  <pre class="chroma">
+                  <code>
+          @article{alali2022deepunflooding,
+          title={Deep learning unflooding for robust subsalt waveform inversion},
+          author={Alali, Abdullah and Vladimir, Kazei and Mahesh, Kalita and Alkhalifah, Tariq},
+          journal={Geophysical prospecting},
+          volume={},
+          pages={},
+          year={2022},
+          publisher={Wiley}
+          }
+          </code>
+      </pre>
+              </div>
+              <p>
+                  <!-- See <a href="">paper</a> and <a href="">supplementary material</a> for details.  -->
+              </p>
+          </div>
+
+</div>
+
+
+<!-- ====================================================== -->
+<!-- =========== To ADD your Research ===================== -->
+<!-- ============== STOP EDITING HERE ===================== -->
+<!-- ====================================================== -->
+    
+
+     <!-- ====================================================== -->
+     <!-- ===================== Footer ========================= -->
+     <!-- ====================================================== -->
+
+     
+  <center>
+      <div class="container">
+      </div><div class="panel-footer">
+        <p class="footer-company-name">All Rights Reserved. &copy; 2022 
+          <a href="https://swagroup.kaust.edu.sa/">Seismic Wave Analysis Group</a>
+       </p>
+      </div>
+      </div><!-- end container -->
+  </center>
+     
+ 
+     <!-- Optional JavaScript -->
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script> -->
+     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> -->
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+     
+ 
+     <script type="text/javascript">
+ 
+       function change_height_cf(el) {
+         if (el.height > 0) {
+                document.getElementById("cf").style.height = el.height + 8;
+         };
+       };
+       
+ 
+        $(document).ready(function(){
+             $('#firstimage').on('load', function(){
+                console.log(2);
+                 change_height_cf(document.getElementById("firstimage"));
+             });
+ 
+             if ($('#firstimage')[0].complete) {
+               console.log(3);
+               change_height_cf(document.getElementById("firstimage"));
+             };
+ 
+             $('#lastimage').on('load', function(){
+               console.log(2);
+               change_height_cf(document.getElementById("lastimage"));
+             });
+             if ($('#lastimage')[0].complete) {
+               console.log(3);
+               change_height_cf(document.getElementById("lastimage"));
+             };
+ 
+           });
+       
+     </script>
+     
+ 
+    <!-- photoswipe -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js"></script>
+ 
+ 
+     <script src="img-gallery.js"></script>
+   
+ </body>
+ </html>
+  
+ 
